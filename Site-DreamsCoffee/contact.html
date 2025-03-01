@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-sc ale=1.0">
+    
+    <!---===== CSS ===== -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!--- ===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    
+    <title> Dream Coffee </title>
+    
+    <!--- ===== Linking Font Awesone for icons -->
+    <link rel="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S11BV5BWTR"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-S11BV5BWTR');
+    </script>
+    
+</head>
+
+<body>
+    <!-- Header / Navbar-->
+    <header>
+        <nav class="navbar section-content">
+
+            <div class="image-text">
+                <span class="logo">
+                    <img src="images/logo.png" alt="logo">
+                </span>
+            </div>
+
+            <ul class="nav-menu">
+
+                <button id="menu-close-button" class="fas fa-times">
+                    <i class='bx bx-window-close' ></i>
+                </button>
+
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Search..." class="search-input">
+                    <i id="search-icon" class="bx bx-search"></i>
+                </div>
+
+                <li class="nav-item">
+                    <a href="home.html">
+                        <i class='bx bx-home-heart icon'></i>
+                        <span class="text nav-text"> <b> Home</b></span>
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="menu.html">
+                        <i class='bx bx-menu icon'></i>
+                        <span class="text nav-text"> <b>Menu</b></span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="about_us.html">
+                        <i class='bx bx-coffee icon'></i>
+                        <span class="text nav-text"> <b>About us</b></span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="gallery.html">
+                        <i class='bx bx-images icon'></i>
+                        <span class="text nav-text"> <b>Gallery</b></span>
+
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="testimonials.html">
+                        <i class='bx bxs-calendar-event icon'></i>
+                        <span class="text nav-text"> <b> Testimonials </b></span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="contact.html">
+                        <i class='bx bxs-contact icon'></i>
+                        <span class="text nav-text"> <b>Contact</b></span>
+                    </a>
+                </li>
+
+
+                <li class="nav-item-toogle">
+                
+                    <div class="moon-sun">
+
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    
+                        <span class="text mode-text"> .... </span>
+    
+                        <div class="toggle-switch">
+                          <span class="switch"></span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+           
+
+            <button id="menu-open-button" class="fas fa-bars"> 
+                <i class='bx bx-book-open'></i>    
+            </button>
+        </nav>
+
+    </header>
+
+    <main>
+        <!--Contact section-->
+        <div class="contact-section">
+            <h2 class="section-title">~ Contact Us ~</h2>
+            <div class="section-content">
+                <ul class="contact-info-list">
+                    
+                    <li class="contact-info">
+                        <i class='bx bxs-location-plus' ></i>
+                        <p> 123 Coffee Lane, Coffee City </p>
+                    </li>
+
+                    <li class="contact-info">
+                        <i class='bx bxs-phone' ></i>
+                        <p> +123 456 7890 </p>
+                    </li>
+
+                    <li class="contact-info">
+                        <i class='bx bxs-envelope' ></i>
+                        <p> info@dreamscoffee.com </p>
+                    </li>
+
+                    <li class="contact-info">
+                        <i class='bx bxs-hourglass' ></i>
+                        <p> Mon-Fri 8am - 6pm </p>
+                    </li>
+
+                    <li class="contact-info">
+                        <i class='bx bx-world'></i>
+                        <p> www.dreamscoffee.com </p>
+                    </li>
+
+                </ul>
+
+                <form id="contactForm" class="contact-form">
+                    <h2 class="contact-message"> We've been happy to know your opinion about our coffee shop!  </h2>
+                    <input type="text" id="firstName" placeholder="First Name" class="form-input" required>
+                    <input type="text" id="lastName" placeholder="Last Name" class="form-input" required>
+                    <input type="email" id="email" placeholder="Your Email" class="form-input" required>
+                    <input type="tel" id="phone" placeholder="Your Phone Number" class="form-input" required>
+                    <input type="text" id="address" placeholder="Your Address" class="form-input">
+    
+                    <select id="subject" class="form-input" required>
+                        <option value="">Select Subject</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="support">Customer Support</option>
+                    </select>
+    
+                    <textarea id="message" placeholder="Your Message" class="form-input" rows="4" required></textarea>
+    
+                    <label class="form-checkbox">
+                        <input type="checkbox" id="gdpr" required>
+                        I agree to the <a href="#">Privacy Policy</a>
+                    </label>
+
+    
+                    <label class="form-checkbox">
+                        <input type="checkbox" id="newsletter">
+                        Sign me up for the newsletter
+                    </label>
+                    <br>
+    
+                    <button type="submit" class="submit-button">Submit</button>
+                </form>
+
+            </div>
+        </div>
+      
+        <!--Footer section-->
+       <footer class="footer">
+           <div class="footer-container">
+               <div class="footer-section">
+                   <h3>DreamCoffee</h3>
+                   <div class="footer-information">
+                       <p>Crafting the best coffee experience, one cup at a time.</p>
+                       <p>&copy; 2024 DreamCoffee. All rights reserved.</p>
+                   </div>
+               </div>
+       
+               <div class="footer-section">
+                   <h3>Contact Us</h3>
+                   <div class="footer-information">
+                       <p>Email: info@dreamcoffee.com</p>
+                       <p>Phone: +123 456 7890</p>
+                       <p>Address: 123 Coffee Lane, Coffee City</p>
+                       <p>Hours: Mon-Fri 8am - 6pm</p>
+                   </div>
+               </div>
+       
+               <div class="footer-section">
+                   <h3>Follow Us</h3>
+                   <div class="footer-information">
+                       <div class="social-icons">
+                           <a href="#" class="social-link">
+                               <i class='bx bxl-facebook-circle icon_s'></i>
+                           </a>
+
+                           <a href="#" class="social-link">
+                               <i class='bx bxl-instagram-alt icon_s' ></i>
+                           </a>
+
+                           <a href="#" class="social-link">
+                               <i class='bx bxl-tiktok icon_s'></i>
+                           </a>
+
+                           <a href="#" class="social-link">
+                               <i class='bx bxl-twitter icon_s' ></i>
+                           </a>            
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </footer>
+
+   </main>
+
+      <!-- Butonul Help -->
+      <button id="helpButton" title="Help" onclick="openHelpModal()" class="help-button">
+        <i class='bx bx-help-circle' style="font-size: 30px;"></i>
+    </button>
+
+    <!-- Help Modal (Fereastra de Ajutor) -->
+    <div id="helpModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeHelpModal()">&times;</span>
+            <h2>How can we help you?</h2>
+            <p>Here are some useful resources:</p>
+            <div class="help-options">
+                <div class="help-item">
+                    <h3><a href="javascript:void(0);" onclick="openFAQ()">Frequently Asked Questions</a></h3>
+                    <p>Find answers to common questions about our café and services.</p>
+                </div>
+                <div class="help-item">
+                    <h3><a href="mailto:info@dreamcoffee.com">Contact Us Directly</a></h3>
+                    <p>Have a question? Email us and we'll get back to you shortly.</p>
+                </div>
+                <div class="help-item">
+                    <h3><a href="#live-chat" onclick="openLiveChat()">Live Chat</a></h3>
+                    <p>Chat with us in real-time for any inquiries you may have!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="liveChatModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLiveChatModal()">&times;</span>
+            <h2>Live Chat</h2>
+            <div id="chatBox" class="chat-box">
+                <div class="chat-message bot-message">
+                    <p>Hi! How can I help you today?</p>
+                </div>
+            </div>
+            <textarea id="userMessage" placeholder="Type your message..."></textarea>
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+
+     <!-- Fereastra pentru Întrebările Frecvente -->
+     <div id="faqModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeFAQ()">&times;</span>
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>How do I get to your café?</h3>
+                    <p>Our café is located at the adress: 123 Coffee Lane, Coffee City. You can find us easily in the heart of Coffee City. We're just a few minutes walk from the Central Park </p>
+                </div>
+                <div class="faq-item">
+                    <h3>What are your opening hours?</h3>
+                    <p>We are open Monday to Friday from 8:00 AM to 6:00 PM, and on weekends from 9:00 AM to 5:00 PM. Feel free to stop by anytime!</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do I need to make a reservation?</h3>
+                    <p>We don't require reservations. However, if you're coming with a large group, feel free to give us a call at +123 456 7890 to ensure we have space available for you.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What types of coffee do you serve?</h3>
+                    <p>We offer a variety of freshly brewed coffee, including espresso, cappuccino, latte, mocha, and more. We also have a selection of non-coffee beverages like tea, hot chocolate, and smoothies.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you have options for dietary restrictions?</h3>
+                    <p>Yes, we have dairy-free and gluten-free options available. Ask our staff for recommendations when you visit!</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I take my coffee to go?</h3>
+                    <p>Absolutely! You can enjoy your coffee in-house or take it to go. Just let us know how you'd like it when you order.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you offer gift cards?</h3>
+                    <p>Yes, we offer gift cards in various denominations. Feel free to ask at the counter for more details!</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you have Wi-Fi at the café?</h3>
+                    <p>Yes, we offer free Wi-Fi to our customers. Simply ask for the Wi-Fi password when you visit!</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I bring my pet?</h3>
+                    <p>We love pets! While we have a pet-friendly outdoor seating area, we kindly ask that pets stay outside the indoor seating area for everyone's comfort.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you offer catering or special events?</h3>
+                    <p>Yes, we provide catering for small events and parties. Please reach out to us at +123 456 7890 or stop by to discuss your event needs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+   <script src="script_contact.js"> </script>
+   <script src="script.js"> </script>
+   <script src="script_search.js"></script>
+
+   <button onclick="bottomFunction()" id="downButton" title="Go to bottom">
+         <i class='bx bx-downvote'></i>
+    </button>
+
+    <button onclick="topFunction()" id="upButton" title="Go to top">
+        <i class='bx bx-upvote' ></i>
+    </button>
+
+
+</body>
+</html>

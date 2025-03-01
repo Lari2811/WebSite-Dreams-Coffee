@@ -1,0 +1,1195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("styles_home.css");
+@import url("styles_about_us.css");
+@import url("styles_menu.css");
+@import url("styles_testimonials.css");
+@import url("styles_gallery.css");
+@import url("styles_contact.css");
+
+
+*{
+    font-family: "Popins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+ }
+
+ body.dark{
+    /* ==== Colors ==== */
+    --body-color: #18191a; 
+    --sidebar-color:#242526;
+    --white-color: #242526;
+    --primary-color: hsl(0, 0%, 31%);
+    --primary-color-header: #635650;
+    --primary-color-light: #d1c8c1;
+    --text-color: #ffffff;
+    --backgroung_logo-color: rgb(199, 190, 182);
+    --hover-color: #2c1417;
+    --title-color: #e9ceab;
+    --toggle-color: #c0c4b5;
+    --dark-color: white;
+    --background-color: linear-gradient(45deg, rgb(50, 30, 20), rgba(55, 50, 35, 0.979), rgb(50, 30, 20));
+    --medium-gray-color: #fff;
+    --black-color: black;
+    --highlight-color: #a9ff81;
+    --help-hover: rgb(97, 84, 84);
+    --background-color-help: #928c82;
+    --message-color-help: #cec8c8f8;
+    --up-button-color: rgba(58, 53, 53, 0.8);
+}
+ 
+:root{
+    /* ==== Colors ==== */
+    --body-color: #E4E9f7;
+    --white-color: #fff;
+    --sidebar-color: #fff;
+    --primary-color: #66402a;
+    --primary-color-header: #744429e8;
+    --primary-color-light: #e2d8d8;
+    --text-color: #f1f1f1;
+    --backgroung_logo-color: rgb(245, 216, 188);
+    --hover-color: #ad7179;
+    --toggle-color: #DDD;
+    --title-color: #fdfdfd;
+    --dark-color: black;
+    --background-color: linear-gradient(45deg, rgb(177, 103, 60), rgba(121, 109, 42, 0.979),rgb(177, 103, 60));
+    --medium-gray-color: #555252;
+    --black-color: black;
+    --highlight-color: #ff0;
+    --help-hover: rgb(151, 140, 156);
+    --background-color-help: #ffffff;
+    --message-color-help: #dd754475;
+    --up-button-color: rgba(255, 255, 255, 0.8);
+
+    /* ==== Transition ==== */
+    --tran-03: all 0.2s ease ;
+    --tran-03: all 0.3s ease ;
+    --tran-04: all 0.4s ease ;
+    --tran-05: all 0.5s ease ;
+
+    /* === Font size ===*/
+    --font-size-s: 0.9rem;
+    --font-size-n: 1rem;
+    --font-size-m: 1.12rem;
+    --font-size-l: 1.3rem;
+    --font-size-xl: 2.5rem;
+    --font-size-xxl: 4rem;
+
+     /* === Font weight ===*/
+    --font-weight-norml: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* === BOrder radius ===*/
+    --border-radius-s: 8px;
+    --border-radius-m: 30px;
+    --border-radius-l: 50px;
+    --border-radius-circle: 50%;
+
+    /* === Site max width */
+    --site-max-width: 1300px;
+
+}
+
+/* Stylings for whole site */
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+img{
+    width: 100%;
+}
+
+.section-content{
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: var(--site-max-width);
+}
+
+
+
+/* NavBar styling */
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    background: var(--primary-color-header);
+}
+
+header .navbar{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .nav-menu{
+    line-height: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-menu .nav-item {
+    font-size: 20px;
+    padding: 10px 15px;
+    color: var(--primary-color-light);
+    border-radius: var(--border-radius-m);
+    transition: var(--tran-03); /* Tranziție lină */
+}
+
+.navbar .nav-menu .nav-item:hover {
+    color: var(--primary-color);
+    background: var(--hover-color);
+    transform: scale(1.1); /* Crește dimensiunea elementului */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adaugă umbră pentru un efect tridimensional */
+    border-radius: var(--border-radius-m); /* Păstrează colțurile rotunjite */
+}
+
+.navbar .nav-menu .nav-item-toogle
+{
+    font-size: 20px;
+    padding: 10px 15px;
+    color: var(--primary-color-light);
+    border-radius: var(--border-radius-m);
+    transition: var(--tran-03); /* Tranziție lină */
+}
+
+
+
+.navbar .nav-menu .nav-item .nav-text{
+    color: var(--primary-color-light);
+}
+
+.navbar .nav-menu .nav-item .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color-light);
+    font-size: 30px;
+}
+
+.navbar .image-text{
+    font-size: var(--font-size-l);
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img
+{
+    width: 80px;
+    border-radius: 10px;
+    background: var(--backgroung_logo-color)
+}
+
+
+/* dark mode / light */
+
+.navbar .nav-menu .toggle-switch{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-width: 60px;
+    cursor: pointer;
+    background: vafr(--primary-color-light);
+    margin-top: 18px;
+}
+
+/* For dark/light icon to be in line with*/
+.navbar .nav-item-toogle .moon-sun i.sun, 
+.navbar .nav-item-toogle .moon-sun i.moon{
+   margin-top: 17px;;
+}
+
+.mode .mode-text{
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--text-color);
+    transition: var(--tran-03);
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.toggle-switch .switch{
+    position: relative;
+    height: 33px;
+    width: 66px;
+    left: 35px;
+    border-radius: 25px;
+    background: var(--toggle-color);
+}
+
+.switch::before{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    top: 19%;
+    left: 10px;
+    transform: translateY(-50%);
+    background: var(--sidebar-color);
+    transform: var(--tran-03);
+}
+
+body.dark .switch::before{
+    left: 40px;
+}
+
+.navbar .nav-item-toogle .moon-sun{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .nav-item-toogle  i.sun{
+    opacity: 0;
+}
+
+body.dark .navbar .nav-item-toogle .moon-sun i.sun{
+    opacity: 1;
+}
+
+body.dark .navbar .nav-item-toogle  i.moon{
+    opacity: 0;
+}
+
+.navbar .nav-item .mode-text
+{
+    font-size: 20px;
+    padding: 1px 18px;
+    color: var(--primary-color-light);
+}
+
+
+/* dark */
+body.dark .navbar li a:hover .icon,
+body.dark .navbar li a:hover .text{
+    color: var(--text-color);
+}
+
+.navbar :where(#menu-close-button, #menu-open-button){
+    display: none;
+}
+
+/*  ==== Buton ===  */
+#upButton {
+    display: none; /* Ascuns inițial */
+    position: fixed;
+    bottom: 88px; /* Poziționat la 30px de jos */
+    right: 30px;  /* Poziționat la 30px de dreapta */
+    z-index: 99; /* Îl face să fie deasupra altor elemente */
+    border: none;
+    outline: none;
+    background-color: var(--up-button-color); 
+    color: var(--dark-color);
+    padding: 13px;
+    border-radius: 50%; /* Îl face rotund */
+    cursor: pointer;
+    font-size: 25px; /* Mărimea fontului săgeții */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Umbră subtilă */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Tranziții netede */
+}
+
+#upButton:hover {
+    background-color: var(--hover-color);
+    box-shadow: 0 4px 15px rgba(223, 163, 163, 0.3); 
+}
+
+#downButton {
+    display: none; /* Ascuns inițial */
+    position: fixed;
+    bottom: 30px; /* Poziționat deasupra lui upButton */
+    right: 30px;  /* Poziționat la 30px de dreapta */
+    z-index: 99; /* Îl face să fie deasupra altor elemente */
+    border: none;
+    outline: none;
+    background-color: var(--up-button-color); 
+    color: var(--dark-color);
+    padding: 13px;
+    border-radius: 50%; /* Îl face rotund */
+    cursor: pointer;
+    font-size: 25px; /* Mărimea fontului săgeții */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Umbră subtilă */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Tranziții netede */
+}
+
+#downButton:hover {
+    background-color: var(--hover-color);
+    box-shadow: 0 4px 15px rgba(163, 223, 163, 0.3); /* Umbră verde subtilă */
+}
+
+
+
+/* ------Footer ------------- */
+footer {
+    background-color: var(--primary-color-header);
+    color: #fff;
+    padding: 20px 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-section h3, .footer-section h4 {
+    color: #f9f4ef;
+}
+
+.footer-section p {
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #f9f4ef;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    font-size: 0.9em;
+    color: #d4cbc7;
+}
+
+.social-link {
+    color: white; 
+    font-size: 32px; 
+    transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+.social-link:hover {
+    color: #f1c40f; 
+    transform: scale(1.2); 
+}
+
+.footer-information{
+    margin-top: 10px;
+    gap: 20px;
+}
+
+
+.section-title{
+    text-align: center;
+    font-style: italic;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-size: var(--font-size-xxl);
+    color: var(--title-color);
+    font-family: "Miniver";
+}
+
+
+/* ------------ Search Bar -------------*/
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px; 
+}
+
+.search-input {
+    padding: 8px 20px;
+    font-size: 14px;
+    border-radius: 25px; 
+    border: 2px solid #fff; 
+    background-color: var(--primary-color-light); 
+    color: var(--black-color); 
+    outline: none; 
+    transition: all 0.3s ease; 
+}
+
+.search-input:focus {
+    border-color: var(--hover-color);; 
+  }
+
+.search-bar i {
+    font-size: 25px;
+    color: var(--primary-color-light); 
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.search-bar i:hover {
+    color: var(--hover-color); 
+}
+
+.search-input,
+.search-bar i {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); 
+}
+
+.highlight {
+    background-color: var(--highlight-color); 
+    color: #000; 
+    font-weight: bold; 
+    padding: 0 3px; 
+    border-radius: 3px; 
+}
+
+/* --------------Butonul Help -----------------*/
+.help-button {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    background-color: var(--primary-color-header);
+    color: var(--text-color);
+    font-size: 25px;
+    border-radius: 50%;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.help-button:hover {
+    background-color: var(--hover-color);
+}
+
+/* Stilul modalelor */
+.modal {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: var(--toggle-color);
+    margin: 15% auto;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #888;
+    width: 60%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.modal-content .close {
+    color: var(--white-color);
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.modal-content .close:hover,
+.modal-content .close:focus {
+    color: var(--dark-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.help-options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    padding: 20px;
+}
+
+.help-item {
+    background-color: var(--white-color);
+    border-radius: 8px;         
+    padding: 20px;             
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.help-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px; 
+    font-weight: bold;
+}
+
+.help-item p {
+    font-size: 16px;
+    color: var(--dark-color);
+    line-height: 1.6;       
+    margin: 0;               
+}
+
+.help-item:hover {
+    background-color: var(--help-hover);  
+    cursor: pointer;           
+}
+
+.help-item a {
+    color: var(--dark-color);  
+    text-decoration: none; 
+}
+
+.help-item a:hover {
+    text-decoration: underline; 
+}
+
+
+
+
+/*Pentru intrebari si raspunsuri */
+.faq-list {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.faq-item {
+    background-color: var(--white-color);
+    border-radius: 8px;        
+    margin-bottom: 20px;       
+    padding: 20px;             
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.faq-item h3 {
+    font-size: 22px;
+    color: var(--dark-color);
+    margin-bottom: 10px;  
+    font-weight: bold;
+}
+
+.faq-item p {
+    font-size: 16px;
+    color: var(--dark-color);
+    line-height: 1.6;       
+    margin: 0;               
+}
+
+.faq-item:hover {
+    background-color: var(--help-hover); 
+    cursor: pointer;            
+}
+
+/* Modal pentru Live Chat */
+#liveChatModal {
+    display: none; /* Ascuns initial */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 50px;
+}
+
+/* Conținutul modalei de Live Chat */
+#liveChatModal .modal-content {
+    background-color: var(--background-color-help);
+    margin: auto;
+    margin-top: 150px;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Stilizarea mesajelor din chat */
+.chat-box {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: var(--message-color-help);
+    border-radius: 8px;
+}
+
+.chat-message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.bot-message {
+    background-color: #666239; 
+    color: white;
+}
+
+.user-message {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+/* Stil pentru zona de introducere a mesajelor */
+#userMessage {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+/* Stil pentru butonul de trimitere */
+.modal-content button {
+    background-color: #666239;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: var(--primary-color);
+}
+
+/* Butonul de închidere pentru chat */
+#liveChatModal .close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px; 
+    right: 15px;
+    cursor: pointer;
+}
+
+#liveChatModal .close:hover {
+    color: black;
+    text-decoration: none;
+}
+
+
+
+/* Media query pentru ecrane de telefon */
+/* Elemente comune tuturor paginilor */
+@media (max-width: 1024px) {
+    :root {
+        --font-size-m: 1.2rem;
+        --font-size-l: 1.5rem;
+        --font-size-xl: 2rem;
+        --font-size-xxl: 3rem;
+    }
+
+    body.show-mobile-menu header::before{
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(5px);
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    /* ------------------- Navbar -------------------- */
+    .navbar :where(#menu-close-button, #menu-open-button)
+    {
+        display: block;
+        font-size: var(--font-size-xl);
+    }
+
+    .navbar #menu-close-button{
+        color: var(--dark-color);
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+
+    .navbar #menu-close-button:hover{
+        color: var(--primary-color-header);
+    }
+
+    .navbar #menu-open-button
+    {
+        color: #fff;
+    }
+
+    .navbar #menu-open-button:hover
+    {
+        color: var(--black-color);
+    }
+
+    .navbar .nav-menu{
+        display: block;
+        position: fixed;
+        overflow-y: auto; 
+        left: -400px;
+        width: 400px;
+        top: 0;  
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        background-color: var(--white-color);
+        transition: left 0.7s ease;
+    }
+
+    body.show-mobile-menu .navbar .nav-menu{
+        left: 0px;
+    }
+
+    .navbar .nav-menu .nav-item .nav-text,
+    .navbar .nav-menu .nav-item .icon{
+        color: var(--dark-color);
+    }
+
+    .navbar .nav-menu .nav-item {
+        color: var(--dark-color);
+        display: block;
+        margin-top: 70px;
+        font-size: var(--font-size-xl);
+        transform: scale(1.0);
+    }
+
+    .navbar .nav-menu .nav-item-toogle {
+        color: var(--dark-color);
+        display: block;
+        margin-top: 150px;
+        font-size: var(--font-size-xl);
+    }
+
+    .navbar .nav-menu .search-bar {
+        color: var(--dark-color);
+        display: block;
+        font-size: var(--font-size-xl);
+    }
+
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-section {
+        margin: 20px;
+        min-width: 300px;
+    }
+
+    .footer-section h3 {
+        font-size: 20px;
+    }
+
+    /* Butonul Help */
+    .help-button {
+        font-size: 25px;
+        padding: 15x;
+    }
+
+    .help-button:active {
+        transform: scale(0.95);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    }
+}
+
+@media (max-width: 768px) 
+{
+    :root{
+        --font-size-m: 1rem;
+        --font-size-l: 1.3rem;
+        --font-size-xl: 1.5rem;
+        --font-size-xxl: 2.5rem;
+        }
+    
+        body.show-mobile-menu header::before{
+            content: "";
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            backdrop-filter: blur(5px);
+            background: rgba(0, 0, 0, 0.2);
+        }
+    
+        /* ------------------- Navbar -------------------- */
+        .navbar :where(#menu-close-button, #menu-open-button)
+        {
+            display: block;
+            font-size: var(--font-size-xl);
+        }
+    
+        .navbar #menu-close-button{
+            color: var(--dark-color);
+            position: absolute;
+            right: 30px;
+            top: 30px;
+        }
+    
+        .navbar #menu-close-button:hover{
+            color: var(--primary-color-header);
+        }
+    
+        .navbar #menu-open-button
+        {
+            color: #fff;
+        }
+    
+        .navbar #menu-open-button:hover
+        {
+            color: var(--black-color);
+        }
+    
+        .navbar .nav-menu{
+            display: block;
+            position: fixed;
+            overflow-y: auto; 
+            left: -350px;
+            width: 350px;
+            top: 0;  
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 100px;
+            background-color: var(--white-color);
+            transition: left 0.5s ease;
+        }
+    
+        body.show-mobile-menu .navbar .nav-menu{
+            left: 0px;
+        }
+    
+        .navbar .nav-menu .nav-item .nav-text,
+        .navbar .nav-menu .nav-item .icon{
+            color: var(--dark-color);
+        }
+    
+        .navbar .nav-menu .nav-item {
+            color: var(--dark-color);
+            display: block;
+            margin-top: 70px;
+            font-size: var(--font-size-xl);
+            transform: scale(1.0);
+        }
+    
+        .navbar .nav-menu .nav-item-toogle {
+            color: var(--dark-color);
+            display: block;
+            margin-top: 150px;
+            font-size: var(--font-size-l);
+        }
+    
+        .navbar .nav-menu .search-bar {
+            color: var(--dark-color);
+            display: block;
+            margin-top: 20px;
+            font-size: var(--font-size-l);
+        }
+
+
+        /*---------------- Footer --------------------*/
+        .footer-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .footer-section {
+            margin: 20px 0;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+    
+        .footer-section ul {
+            padding: 0;
+        }
+    
+        .footer-section ul li {
+            margin-bottom: 15px;
+        }
+    
+        footer p {
+            font-size: 0.8em;
+        }
+    
+        .social-link {
+            font-size: 28px;
+        }
+
+
+    /* ---------- Title -----------*/
+    .section-title {
+        margin-top: 50px; 
+        margin-bottom: 15px; 
+        font-size: var(--font-size-xxl);
+    }
+
+    /* ------------ Search Bar ------------------*/
+    .search-bar {
+        gap: 8px; /* Spațiu mai mic între elemente pe ecrane mici */
+    }
+
+    .search-input {
+        font-size: 12px; /* Diminuează fontul pentru ecrane mici */
+        padding: 6px 15px; /* Ajustează padding-ul */
+        max-width: 90%; /* Lățime maximă */
+    }
+
+    .search-bar i {
+        font-size: 20px; /* Diminuarea dimensiunii iconiței */
+    }
+
+    /* --------------Butonul Help -----------------*/
+    .help-button {
+        font-size: 20px; 
+        padding: 10px; 
+    }
+
+    .help-button:active {
+        transform: scale(0.85);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    }
+
+    .modal-content {
+        margin: 10% auto;
+        width: 80%;
+        padding: 20px;
+        margin-top: 150px;
+    }
+
+    .help-options {
+        gap: 15px;
+    }
+
+    .help-item {
+        padding: 15px;
+    }
+
+    .help-item h3 {
+        font-size: 18px;
+    }
+
+    .help-item p {
+        font-size: 14px;
+    }
+
+    /* ----------- Frequently Questions ------------ */
+    .faq-item {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .faq-item h3 {
+        font-size: 20px;
+    }
+
+    .faq-item p {
+        font-size: 14px;
+    }
+
+    #liveChatModal .modal-content {
+        margin-top: 150px;
+        width: 75%;
+        max-width: none;
+        padding: 15px;
+    }
+
+    #userMessage {
+        height: 40px;
+        padding: 8px;
+    }
+
+    .modal-content button {
+        padding: 8px 12px;
+    }
+
+    .chat-box {
+        max-height: 200px;
+        padding: 8px;
+    }
+
+    #upButton {
+        font-size: 20px; 
+    }
+
+    #downButton{
+        font-size: 20px; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    :root {
+        --font-size-m: 0.9rem;
+        --font-size-l: 1.2rem;
+        --font-size-xl: 1.4rem;
+        --font-size-xxl: 2.2rem;
+    }
+
+    body.show-mobile-menu header::before {
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(5px);
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    /* ------------------- Navbar -------------------- */
+    .navbar :where(#menu-close-button, #menu-open-button) {
+        display: block;
+        font-size: var(--font-size-l);
+    }
+
+    .navbar #menu-close-button {
+        color: var(--dark-color);
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    .navbar #menu-close-button:hover {
+        color: var(--primary-color-header);
+    }
+
+    .navbar #menu-open-button {
+        color: #fff;
+    }
+
+    .navbar #menu-open-button:hover {
+        color: var(--black-color);
+    }
+
+    .navbar .nav-menu {
+        display: block;
+        position: fixed;
+        overflow-y: auto;
+        left: -250px;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 80px;
+        background-color: var(--white-color);
+        transition: left 0.5s ease;
+    }
+
+    body.show-mobile-menu .navbar .nav-menu {
+        left: 0;
+    }
+
+    .navbar .nav-menu .nav-item .nav-text,
+    .navbar .nav-menu .nav-item .icon {
+        color: var(--dark-color);
+    }
+
+    .navbar .nav-menu .nav-item {
+        display: block;
+        margin-top: 50px;
+        font-size: var(--font-size-l);
+        transform: scale(1.0);
+    }
+
+    .navbar .nav-menu .nav-item-toogle {
+        color: var(--dark-color);
+        display: block;
+        margin-top: 200px;
+        font-size: var(--font-size-m);
+    }
+
+    .navbar .nav-menu .search-bar {
+        color: var(--dark-color);
+        display: block;
+        margin-top: 15px;
+        font-size: var(--font-size-l);
+    }
+
+    /* ------------------- Footer -------------------- */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin: 5px 0;
+    }
+
+    .footer-section h3, .footer-section h4 {
+        font-size: 16px;
+    }
+
+    .footer-section ul {
+        padding: 0;
+        text-align: center;
+    }
+
+    .footer-section ul li {
+        margin-bottom: 8px;
+    }
+
+    .footer-section ul li a {
+        font-size: 14px;
+    }
+
+    .footer-information {
+        margin-top: 15px;
+    }
+
+    .footer-information p {
+        font-size: 12px;
+    }
+
+    /* Butonul Help */
+    .help-button {
+        font-size: 18px; 
+        padding: 8px; 
+    }
+
+    .help-button:active {
+        transform: scale(0.75);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    }
+
+    #upButton {
+        font-size: 18px; 
+    }
+
+    #downButton {
+        font-size: 18px; 
+    }
+}
+
+

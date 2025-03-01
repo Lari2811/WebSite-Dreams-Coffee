@@ -1,0 +1,142 @@
+/* === Home section styling === */
+.home-section {
+    min-height: 100vh;
+    width: 100%; 
+    background: var(--background-color);
+}
+
+.home-section .section-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    color: var(--primary-color-light);
+}
+
+.home-section .home-details .subtitle {
+    margin-top: 10px;
+    max-width: 780px; 
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    animation: fadeInUp 1s ease; 
+}
+
+.home-section .home-details .description {
+    text-align: center;
+    max-width: 90%;
+    margin: 25px 10px 25px;
+    font-size: var(--font-size-m);
+}
+
+.home-section .home-image-wrapper {
+    margin-top: 150px;
+    margin-bottom: 50px;
+    max-width: 650px;
+    box-shadow: 10px 8px 20px rgba(255, 255, 255, 0.521);
+    border-radius: 50%;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.home-section .home-image-wrapper:hover {
+    transform: scale(1.05);
+    box-shadow: 15px 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.home-section .home-details .buttons {
+    display: flex;
+    gap: 23px;
+}
+
+.home-section .home-details .button {
+    padding: 10px 30px;
+    border: 1px solid transparent;
+    color: var(--primary-color);
+    border-radius: var(--border-radius-m);
+    background: var(--title-color);
+    font-weight: var(--font-weight-bold);
+    font-size: 20px;
+    transition: var(--tran-03);
+}
+
+.home-section .home-details .button:hover {
+    color: black;
+    border-color: red;
+    background: white;
+}
+
+body.dark .home-section .home-image-wrapper {
+    filter: grayscale(100%);
+}
+
+/* === Responsivitate === */
+@media (max-width: 768px) {
+
+    
+    .home-section .section-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .home-section .home-details
+    {
+        margin-top: 80px;
+    }
+
+    .home-section .home-details .subtitle {
+        margin-top: 30px;
+        font-size: var(--font-size-l);
+        max-width: 100%;
+    }
+
+
+    .home-section .home-details .description {
+        font-size: var(--font-size-s);
+    }
+
+    .home-section .home-image-wrapper {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        max-width: 80%;
+    }
+
+    .home-section .home-details .buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .home-section .home-details .button {
+        font-size: 16px;
+        padding: 10px 25px; 
+        width: auto; 
+    }
+}
+
+@media (max-width: 480px) {
+    .home-section .section-content {
+        padding: 10px;
+    }
+
+    .home-section .home-details .subtitle {
+        font-size: var(--font-size-m);
+    }
+
+    .home-section .home-details .button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+
+/* === Animație === */
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
